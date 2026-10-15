@@ -9,8 +9,8 @@
 #include <screen.h>
 #include <string.h>
 
-#define WIDTH 160  
-#define HEIGHT 144
+#define WIDTH 320  
+#define HEIGHT 200
 
 GLFWwindow* window;
 GLuint program;

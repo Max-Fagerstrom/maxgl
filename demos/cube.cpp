@@ -105,10 +105,10 @@ int main(void) {
     }*/
 
     Vector translations[4] = {
-        Vector(0.5, 0.5, 2),
-        Vector(-0.5, 0.5, 2),
-        Vector(0.5, -0.5, 2),
-        Vector(-0.5, -0.5, 2)
+        Vector(0.5, 0.5, 1),
+        Vector(-0.5, 0.5, 1),
+        Vector(0.5, -0.5, 1),
+        Vector(-0.5, -0.5, 1)
     };
 
     const int vtxCount = 8;

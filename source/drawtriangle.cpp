@@ -62,6 +62,9 @@ float edgeFunction(Point p0, Point p1, Point p2) {
 
 
 void DrawTriangle(Point p0, Point p1, Point p2) {
+    p0.Truncate();
+    p1.Truncate();
+    p2.Truncate();
     const float ABC = edgeFunction(p0, p1, p2);
 
     if (ABC < 0) {

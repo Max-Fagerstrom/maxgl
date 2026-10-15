@@ -12,6 +12,10 @@ struct Point {
         this->x = x;
         this->y = y;
     }
+    void Truncate() {
+        x = (int)x;
+        y = (int)y;
+    }
 };
 
 struct Vector {
