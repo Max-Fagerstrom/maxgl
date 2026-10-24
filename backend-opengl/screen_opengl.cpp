@@ -1,7 +1,8 @@
 // screen drawing functions, opengl implementation
 #include "maxgl.h"
 #include <stdio.h>
-#include <GL/glew.h>
+#define GLAD_GL_IMPLEMENTATION
+#include <glad/gl.h>
 #include <GLFW/glfw3.h>
 
 #include <math.h>
@@ -145,13 +146,7 @@ int Screen::Initialize() {
 
     glfwMakeContextCurrent(window);
 
-    GLenum glewError = glewInit();
-    if (glewError != GLEW_OK)
-    {
-        fprintf(stderr, "Failed to initialize GLEW: %s\n", glewGetErrorString(glewError));
-        glfwDestroyWindow(window);
-        return -1;
-    }
+    gladLoadGL(glfwGetProcAddress);
 
     setupShaders();
     setupBuffers();
